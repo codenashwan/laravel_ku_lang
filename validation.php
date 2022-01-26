@@ -129,7 +129,7 @@ return [
     'unique' => ':attribute پێشتر گیراوە',
     'uploaded' => 'بەرزبوونەوەی :attribute سەرکەوتوو نەبوو',
     'url' => 'جۆری :attribute دروست نیە',
-    'uuid' => 'The :attribute must be a valid UUID.',
+    'uuid' => ' :attribute پێویستە ناسنامەکەی گونجاو بێت',
     'recaptcha' => 'زانیاری :attribute ڕاست نیە',
 
     /*
