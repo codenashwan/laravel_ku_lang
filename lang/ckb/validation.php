@@ -1,17 +1,17 @@
 <?php
 
 return [
-	
-	/*
-	|--------------------------------------------------------------------------
-	| Validation Language Lines
-	|--------------------------------------------------------------------------
-	|
-	| The following language lines contain the default error messages used by
-	| the validator class. Some of these rules have multiple versions such
-	| as the size rules. Feel free to tweak each of these messages here.
-	|
-	*/
+
+    /*
+    |--------------------------------------------------------------------------
+    | Validation Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines contain the default error messages used by
+    | the validator class. Some of these rules have multiple versions such
+    | as the size rules. Feel free to tweak each of these messages here.
+    |
+    */
 
     'accepted' => 'پێویستە :attribute قبوڵ بکرێت',
     'accepted_if' => 'پێویستە :attribute قبوڵ بکرێت کاتێک :other :value بێت.',
@@ -24,13 +24,12 @@ return [
     'array' => 'پێویستە :attribute کۆمەڵێک لە ژمارە بێت',
     'before' => 'پێویستە :attribute پێش بەرواری :date بێت',
     'before_or_equal' => 'پێویستە :attribute ڕۆژی :date بێت یان ڕۆژێکی پێش ئەوە',
-    'between' =>
-        array (
-            'numeric' => 'پێویستە :attribute لەنێوان :min and :max بێت',
-            'file' => 'پێویستە قەبارەی :attribute لەنێوان :min and :max کیلۆبایت بێت.',
-            'string' => 'پێویستە :attribute لەنێوان پیتەکانی :min and :max بێت.',
-            'array' => 'پێویستە :attribute لەنێوان :min and :max ئایتمدا بێت.',
-        ),
+    'between' => [
+        'numeric' => 'پێویستە :attribute لەنێوان :min and :max بێت',
+        'file' => 'پێویستە قەبارەی :attribute لەنێوان :min and :max کیلۆبایت بێت.',
+        'string' => 'پێویستە :attribute لەنێوان پیتەکانی :min and :max بێت.',
+        'array' => 'پێویستە :attribute لەنێوان :min and :max ئایتمدا بێت.',
+    ],
     'boolean' => 'پێویستە :attribute تەنها ڕاست یان هەڵە بێت',
     'confirmed' => ':attribute دووپات کردنەوەکە وەکو یەک نیە',
     'current_password' => 'وشەی تێپەڕت هەڵەیە.',
@@ -44,8 +43,11 @@ return [
     'digits_between' => 'پێویستە :attribute لەنێوان :min and :max ژمارەدا بێت.',
     'dimensions' => ':attribute قەبارەی وێنەکە هەڵەیە',
     'distinct' => 'لە :attribute نرخێکی دووبارە هەیە',
+    'doesnt_end_with' => 'لەوانەیە :attribute بە یەکێک لەمانەی خوارەوە کۆتایی نەهات: :values.',
+    'doesnt_start_with' => 'لەوانەیە :attribute بە یەکێک لەمانەی خوارەوە دەست پێ نەکات: :values.',
     'email' => 'پێویستە :attribute ئیمەیڵێکی دروست بێت',
     'ends_with' => 'پێویستە :attribute کۆتایی بێت بە یەکێک لە :values ی خوارەوە',
+    'enum' => ':attribute هەڵبژێردراو نادروستە.',
     'exists' => ':attribute دروست نیە',
     'file' => 'پێویستە :attribute فایل بێت',
     'filled' => 'پێویستە :attribute نرخێکی تێدابێت',
@@ -61,7 +63,7 @@ return [
         'string' => ':attribute دەبێت گەورەتر یان یەکسان بێت بە :value پیت.',
         'array' => ':attribute پێویستە :value بڕگە یان زیاتر بێت.',
     ],
-    'image' => 'پێویستە وێنەکان وێنەیەک بێت',
+    'image' => 'دەبێت :attribute وێنەیەک بێت',
     'in' => ':attribute نادروستە',
     'in_array' => 'جۆری :attribute بوونی نیە لە :other.',
     'integer' => 'پێویستە :attribute ژمارە بێت',
@@ -81,27 +83,34 @@ return [
         'string' => ':attribute پێویستە کەمتر یان یەکسان بێت بە :value پیت.',
         'array' => 'نابێت :attribute زیاتر لە :value بڕگەی هەبێت.',
     ],
-    'max' =>
-        array (
-            'numeric' => 'پێویستە :attribute گەورەتر نەبێت لە :max.',
-            'file' => 'پێویستە :attribute گەورەتر نەبێت لە :max کیلۆبایت.',
-            'string' => 'پێویستە :attribute نابێت گەورەتر نەبێت  :max پیت.',
-            'array' => 'پێویستە :attribute گەورەتە نەبێت لە :max کاڵا.',
-        ),
-    'mimes' => 'پێویستە :attribute جۆرێک بێت لە فایلی: :values.',
-    'mimetypes' => 'پێویستە :attribute جۆرێک بێت لە فایلی: :values.',
-    'min' =>
-        array (
-            'numeric' => 'پێویستە :attribute بەلایەنی کەمەوە :min بێت',
-            'file' => 'پێویستە :attribute هیچ نەبێت :min کیلۆبایت بێت',
-            'string' => 'پێویستە :attribute بەلایەنی کەمەوە :min پیت بێت.',
-            'array' => 'پێویستە :attribute بەلایەنی کەمەوە :min جار پێت.',
-        ),
-    'multiple_of' => ':attribute دەبێت فرەیی بێت لە :value.',
-    'not_in' => ':attribute دروست نیە',
-    'not_regex' => 'جۆری :attribute دروست نیە',
+    'mac_address' =>'دەبێت :attribute ناونیشانێکی دروستی ماک ئەدرەس بێت',
+    'max' => [
+        'file' => 'پێویستە :attribute گەورەتر نەبێت لە :max کیلۆبایت.',
+        'numeric' => 'پێویستە :attribute گەورەتر نەبێت لە :max.',
+        'string' => 'پێویستە :attribute نابێت گەورەتر نەبێت  :max پیت.',
+        'string' => 'نابێت :attribute لە پیتەکانی :max گەورەتر بێت.',
+    ],
+    'max_digits' => 'نابێت :attribute ژمارە زیاتری لە :max هەبێت.',
+    'mimes' => ':attribute دەبێت فایلێک بێت لە جۆری: :values.',
+    'mimetypes' => ':attribute دەبێت فایلێک بێت لە جۆری: :values',
+    'min' => [
+        'file' => 'پێویستە :attribute هیچ نەبێت :min کیلۆبایت بێت',
+        'numeric' => 'پێویستە :attribute بەلایەنی کەمەوە :min بێت',
+        'array' => 'پێویستە :attribute بەلایەنی کەمەوە :min جار پێت.',
+        'string' => 'پێویستە :attribute بەلایەنی کەمەوە :min پیت بێت.',
+    ],
+    'min_digits' => 'دەبێت :attribute لانیکەم ژمارەکانی :min ی هەبێت.',
+    'multiple_of' => 'دەبێت :attribute چەند جارێک بێت لە :value.',
+    'not_in' => 'ئەو :attribute هەڵبژێردراوە نادروستە.',
+    'not_regex' => 'فۆرماتەکەی :attribute نادروستە.',
     'numeric' => 'پێویستە :attribute ژمارە بێت',
-    'password' => 'وشەی تێپەڕ دروست نییە.',
+    'password' => [
+        'letters' => 'دەبێت :attribute لانیکەم یەک پیتی تێدابێت.',
+        'mixed' => 'پێویستە :attribute لانیکەم یەک پیتی گەورە و یەک پیتی بچووکی تێدابێت.',
+        'numbers' => ':attribute دەبێت لانیکەم یەک ژمارەی تێدابێت.',
+        'symbols' => 'دەبێت :attribute لانیکەم یەک هێمای تێدابێت.',
+        'uncompromised' => ':attribute ی پێدراو لە دزەکردنی داتادا دەرکەوتووە. تکایە :attribute ێکی جیاواز هەڵبژێرە',
+    ],
     'present' => 'پێویستە :attribute بوونی هەبێت',
     'prohibited' => 'خانەی :attribute قەدەغەیە',
     'prohibited_if' => 'خانەی :attribute قەدەغەیە کاتێک :other :values بێت.',
@@ -109,6 +118,7 @@ return [
     'prohibits' => 'خانەی :attribute :other قەدەغە دەکات لە ئامادەبوون.',
     'regex' => 'جۆری :attribute هەڵەیە',
     'required' => ':attribute داواکراوە',
+    'required_array_keys' =>'مەیدانی :attribute دەبێت نووسراوەکانی بۆ: :values لەخۆبگرێت',
     'required_if' => ':attribute داواکراوە کاتێک :other بریتی بێت لە :value.',
     'required_unless' => ':attribute داواکراوە مەگەر :other هەبێت لەناو :values.',
     'required_with' => ':attribute داواکراوە کاتێک :values بوونی هەبێت',
@@ -116,13 +126,12 @@ return [
     'required_without' => ':attribute داواکراوە کاتێک :values بوونی نەبێت',
     'required_without_all' => ':attribute داواکراوە کاتێک هیچ کام لە :values بوونیان نەبێت',
     'same' => 'پێویستە :attribute و :other هاوتا بن',
-    'size' =>
-        array (
-            'numeric' => 'پێویستە :attribute قەبارەی :size بێت',
-            'file' => 'پێویستە :attribute قەبارەی :size کیلۆبایت بێت.',
-            'string' => 'پێویستە :attribute قەبارەی :size پیت بێت',
-            'array' => 'پێویستە :attribute لەناویدا :size هەبێت',
-        ),
+    'size' => [
+        'file' => 'پێویستە :attribute قەبارەی :size کیلۆبایت بێت.',
+        'numeric' => 'پێویستە :attribute قەبارەی :size بێت',
+        'array' => 'پێویستە :attribute لەناویدا :size هەبێت',
+        'string' => 'پێویستە :attribute قەبارەی :size پیت بێت',
+    ],
     'starts_with' => 'پێویستە :attribute دەست پێبکات بە یەکێک لەمانە :values',
     'string' => 'پێویستە :attribute حەرف بێت',
     'timezone' => 'پێویستە :attribute شوێنێکی دروست بێت',
@@ -130,7 +139,6 @@ return [
     'uploaded' => 'بەرزبوونەوەی :attribute سەرکەوتوو نەبوو',
     'url' => 'جۆری :attribute دروست نیە',
     'uuid' => ' :attribute پێویستە ناسنامەکەی گونجاو بێت',
-    'recaptcha' => 'زانیاری :attribute ڕاست نیە',
 
     /*
     |--------------------------------------------------------------------------
@@ -147,12 +155,6 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-        'database_connection' => [
-            'required' => 'ناتوانرێت پەیوەندی بکرێت بە سێرڤەری مای ئێس کیو ئێڵ', 
-        ],
-        'database_not_empty' => [
-            'required' => 'داتابەیسەکە بەتاڵە',
-        ]  
     ],
 
     /*
@@ -165,10 +167,7 @@ return [
     | of "email". This simply helps us make our message more expressive.
     |
     */
-    'attributes' => [
-            'name' => 'ناو',
-            'phone' => ':attribute ژمارەیەکی هەڵەی تێدایە',
-            'product.barcode' => 'باڕکۆد',
-    ],
+
+    'attributes' => [],
 
 ];
